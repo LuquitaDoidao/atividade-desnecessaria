@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var nota7 = 0
+        var alunos = 2
+        
+
+        while(alunos != 2){
+
+            all = 0
+            var aluno = 1
+            var numeros = []
+
+            while(all != 4){
+                var nota = (parseInt(prompt("Digite a nota do aluno "+(aluno))))
+                all += 1
+                numeros.push(nota)
+                
+            }
+
+            var total = 0;
+            var div = 0
+
+            for(numero in numeros){
+                total += numeros[numero]
+                div = div + 1
+            }
+
+            if((total/4) >= 7){
+                nota7 += 1
+            }
+
+            alunos += 1
+            aluno += 1
+        }
+
+
+
+
+
+
+        var limite = 4
+        var numeros = []
+        var aluno = 1
+
+        while(limite != 0){
+            var nota = (parseInt(prompt("Digite a nota do aluno "+(aluno))))
+            limite -= 1
+            numeros.push(nota)
+            aluno += 1
+        }
+
+        var total = 0;
+        var div = 0
+
+        for(numero in numeros){
+            total += numeros[numero]
+            div = div + 1
+            
+        }
+        alert("as notas foram: "+(numeros)+" e a media é "+(total/div))
+
+    </script>
+</body>
+</html>

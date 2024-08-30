@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var limite = 4
+        var numeros = []
+
+        while(limite != 0){
+            var nota = (parseInt(prompt("Digite uma nota")))
+            limite -= 1
+            numeros.push(nota)
+        }
+
+        var total = 0;
+        var div = 0
+
+        for(numero in numeros){
+            total += numeros[numero]
+            div = div + 1
+            
+        }
+        alert("as notas foram: "+(numeros)+" e a media é "+(total/div))
+
+    </script>
+</body>
+</html>

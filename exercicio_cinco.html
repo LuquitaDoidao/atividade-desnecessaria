@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var limite = 20
+        var numeros = []
+
+        while(limite != 0){
+            var num = (parseInt(prompt("Digite um numero")))
+            limite -= 1
+            numeros.push(num)
+        }
+
+        var par = []
+        var impar = []
+
+        for(numero in numeros){
+            if(numeros[numero]%2 == 0){
+                par.push(numeros[numero])
+            } else if(numeros[numero]%2 !== 0){
+                impar.push(numeros[numero])
+            }
+        }
+        
+        alert("a lista foi: "+(numeros))
+        alert("os pares são: "+(par))
+        alert("os numeros impares são: "+(impar))
+
+    </script>
+</body>
+</html>

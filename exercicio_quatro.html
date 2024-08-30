@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var consoantes = ["q", "w", "r", "t", "y", "p", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"]
+        var palavra = ["c", "a", "l", "o", "p", "s", "i", "t", "a", "s"]
+        var lista3 = []
+        
+        for(letra in consoantes){
+            for(letras in palavra){
+                if(consoantes[letra] == palavra[letras]){
+                    lista3.push(consoantes[letra])
+                }
+            }
+        }
+        
+        alert(lista3)
+
+    </script>
+</body>
+</html>
