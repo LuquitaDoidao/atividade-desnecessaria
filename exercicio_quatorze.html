@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        evidencia = 0
+
+        var p1 = prompt("Você telefonou para a vitima (digite 0 para sim e 1 para não)?")
+        if(p1 == 0){
+            evidencia += 1
+        }
+        var p2 = prompt("Você esteve no local do crime (digite 0 para sim e 1 para não)?")
+        if(p2 == 0){
+            evidencia += 1
+        }
+        var p3 = prompt("Você mora perto da vitima (digite 0 para sim e 1 para não)")
+        if(p3 == 0){
+            evidencia += 1
+        }
+        var p4 = prompt("Você devia para a vitima (digite 0 para sim e 1 para não)")
+        if(p4 == 0){
+            evidencia += 1
+        }
+        var p5 = prompt("Você já trabalhou com a vitima (digite 0 para sim e 1 para não)")
+        if(p5 == 0){
+            evidencia += 1
+        }
+
+        alet(evidencia)
+
+        if(evidencia < 2){
+            alert("Você é inocente")
+        } else if(evidencia == 2){
+            alert("Você é suspeito")
+        }else if((evidencia >= 3) & (eviencia <= 4)){
+            alert("Você é cumplice")
+        }else if(eviencia > 4){
+            alert("Você é suspeito!")
+        }
+
+    </script>
+</body>
+</html>

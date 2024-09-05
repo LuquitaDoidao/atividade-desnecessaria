@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var saltos = ["zero"]
+        var fim = 1
+        var quantidade = 0
+
+        while(fim != 0){
+            var nome = prompt("digite o nome do atleta (-1 para sair)")
+            if(nome == -1){
+                break
+            }else{
+                saltos.push(nome)
+
+                var num = 0
+                while(num != 5){
+                    var nota = parseFloat(prompt("digite a nota do salto"))
+                    saltos.push(nota)
+                    num += 1
+                }
+            }
+        }
+
+
+        
+
+        alert("Atleta: "+(saltos[1])+" saltos: ")
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var notas = []
+        var fim = 1
+        var quantidade = 0
+
+        while(fim != 0){
+            var no = parseInt(prompt("digite uma nota (-1 para sair)"))
+            quantidade += 1
+            if(no >= 0){
+                notas.push(no)
+            }else{
+                fim -= 1
+                quantidade -= 1
+            }
+        }
+
+        var soma = 0
+        for(nota in notas){
+            soma += notas[nota]
+        }
+
+        var media = soma/quantidade
+
+        var acima = []
+        for(nota in notas){
+            if(notas[nota] > media){
+                acima.push(notas[nota])
+            }
+        }
+
+        var abaixo = []
+        for(nota in notas){
+            if(notas[nota] < 7){
+                abaixo.push(notas[nota])
+            }
+        }
+        
+
+        alert((quantidade)+" notas foram analisadas")
+        alert("as notas foram: "+(notas))
+        alert("ao contrario, as notas ficam assim: "+(notas.reverse()))
+        alert("a soma das notas é: "+(soma))
+        alert("a meida das notas é: "+(media))
+        alert("as notas acima da media foram: "+(acima))
+        alert("as notas abaixo de 7 foram:: "+(abaixo))
+        alert("parabens, você encerrou o programa, volte sempre!")
+
+
+    </script>
+</body>
+</html>

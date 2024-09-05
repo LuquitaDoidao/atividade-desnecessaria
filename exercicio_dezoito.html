@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var jogadores = []
+        var fim = 1
+
+        alert("quem foi o melhor jogador?")
+        while(fim != 0){
+            var nome = prompt("digite o numero do jogador (0 para sair): ")
+            if((nome < 0) & (nome > 23)){
+                alert("numero "+(nome)+" invalido, digite numeros de 1 a 23")
+            }else if(nome == 0){
+                fim -= 1
+            }else{
+                jogadores.push(nome)
+            }
+        }
+
+        var quantia = []
+        for(jogador in jogadores){
+            quantia = jogadores.filter(x => x === jogadores[jogador])
+        }
+
+        alert("Resultado da votação:")
+        alert("foram computados "+(jogadores.length))
+        alert("quantidade "+(quantia))
+        alert(jogadores)
+        
+
+        
+
+
+    </script>
+</body>
+</html>
