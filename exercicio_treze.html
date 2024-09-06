@@ -8,23 +8,32 @@
 <body>
     <script>
 
-        var temperaturas = [2, 4, 6, 8, 10]
-        var alturas = [10, 20, 30, 40, 50]
+        var meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+        var temperatura = []
+        var soma = 0
         var media = 0
-        var menor_media = []
-        var idades13 = []
+        var mesalto = []
+        var tempalto = []
 
-        for(temperatura in temperaturas){
-            media += temperaturas[temperatura] 
+        for(i in meses){
+            var tem = (parseInt(prompt("Qual a temperatura media do mes de "+(meses[i]))))
+            temperatura.push(tem)
+            soma += tem
         }
 
-        media = (media/12)
+        media = (soma/12)
 
-        
+        for(i in meses){
+            if(temperatura[i] > media){
+                mesalto.push(meses[i])
+                tempalto.push(temperatura[i])
+            }
+        }
 
-        alert("os numeros são: "+(numeros))
-        alert("a soma deles é: "+(soma))
-        alert("e a multiplicação deles é: "+(mult))
+        alert("os meses que superaram a media de temperatura ("+(media)+") são:")
+        for(i in mesalto){
+           alert((mesalto[i])+" com "+(tempalto[i])+"°C")
+        }
 
 
     </script>

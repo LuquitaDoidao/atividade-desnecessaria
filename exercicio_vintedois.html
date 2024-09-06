@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+        var esfera = 0
+        var limpeza = 0
+        var cabo = 0
+        var quebra = 0
+        var fim = 1
+        var mult = 0
+
+        while(fim != 0){
+            var tem = (parseInt(prompt("Em que estado está o mouse? \nDigite: \n0 para encerrar \n1 para caso ele necessitar da esfera \n2 para caso ele necessitar de limpeza \n3 para caso ele necessitar de troca do cabo ou conector \n4 para caso ele esteja quebrado ou inutilizado")))
+            if(tem == 1){
+                esfera += 1
+            }else if(tem == 2){
+                limpeza += 1
+            }else if(tem == 3){
+                cabo += 1
+            }else if(tem == 4){
+                quebra += 1
+            }else if(tem == 0){
+                fim -= 1
+            }else{
+                alert("numero invalido")
+            }
+            mult += 1
+        }
+       
+        alert("1- necessita da esfera "+(esfera)+" "+((mult/100)*esfera)+"%\n2- necessita de limpeza "+(limpeza)+" "+((mult/100)*limpeza)+"%\n3- necessita troca do cabo ou conector "+(cabo)+" "+((mult/100)*cabo)+"%\n4- quebrado ou inutilizado "+(quebra)+" "+((mult/100)*quebra)+"%")
+
+
+    </script>
+</body>
+</html>

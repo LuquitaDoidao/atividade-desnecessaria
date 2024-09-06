@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var salarios = []
+        var abonos = []
+        var fim = 1
+        var vm = 0
+        var gasto = 0
+        var maior = 0
+        var final = "Salario______Abono \n"
+
+        alert("")
+        while(fim != 0){
+            var nome = parseFloat(prompt("digite o seu salario! (0 para sair)"))
+            if((nome < 0)){
+                alert("não tem como você ganhar só isso")
+            }else if(nome == 0){
+                fim -= 1
+            }else{
+                salarios.push(nome)
+
+                vinte = ((nome/100)*20)
+                if(vinte < 100){
+                    vinte = 100
+                    abonos.push(vinte)
+                    final += "R$ "+(nome)+"______R$ "+(vinte)+"\n"
+                    vm += 1
+                }else{
+                    abonos.push(vinte)
+                    final += "R$ "+(nome)+"______R$ "+(vinte)+"\n"
+                }
+
+                for(abono in abonos){
+                    gasto += abonos[abono]
+
+                    if(abonos[abono] >= maior){
+                        maior = abonos[abono]
+                    }
+                }
+                
+            }
+        }
+        
+        alert(final)
+        alert((salarios.length)+" colaboradores foram processados\n"+"R$ "+(gasto)+" foram gastos com abono\n"+"Valor minimo pago a "+(vm)+" colaboradores\n"+"maior valor de abono pago: "+(maior))
+        
+
+
+    </script>
+</body>
+</html>

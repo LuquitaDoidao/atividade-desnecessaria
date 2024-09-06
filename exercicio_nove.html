@@ -8,17 +8,22 @@
 <body>
     <script>
 
+        // ok
+
         var numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         var soma = 0
+        var listaqua = []
         var qua = 0
 
         for(numero in numeros){
             qua = (numeros[numero] * numeros[numero])
+            listaqua.push(qua)
             soma += qua
         }
 
 
         alert("os numeros são: "+(numeros))
+        alert("os mesmos numeros ao quadrado são: "+(listaqua))
         alert("a soma do quadrado deles é: "+(soma))
 
     </script>

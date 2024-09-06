@@ -13,8 +13,8 @@
 
         alert("quem foi o melhor jogador?")
         while(fim != 0){
-            var nome = prompt("digite o numero do jogador (0 para sair): ")
-            if((nome < 0) & (nome > 23)){
+            var nome = parseInt(prompt("digite o numero do jogador (0 para sair): "))
+            if((nome < 0) || (nome > 23)){
                 alert("numero "+(nome)+" invalido, digite numeros de 1 a 23")
             }else if(nome == 0){
                 fim -= 1
@@ -25,13 +25,12 @@
 
         var quantia = []
         for(jogador in jogadores){
-            quantia = jogadores.filter(x => x === jogadores[jogador])
+            quantia = jogadores.filter(x => x === 1).length
         }
 
         alert("Resultado da votação:")
         alert("foram computados "+(jogadores.length))
         alert("quantidade "+(quantia))
-        alert(jogadores)
         
 
         

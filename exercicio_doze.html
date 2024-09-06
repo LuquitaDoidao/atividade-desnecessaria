@@ -6,45 +6,36 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- ok -->
     <script>
 
-        var idades = [1, 2, 3, 4, 5]
-        var alturas = [10, 20, 30, 40, 50]
+        var idades = [10, 23, 14, 15, 15, 12, 21, 20, 10, 14, 15, 16, 17, 18, 19, 9, 24, 23, 23, 16, 17, 19, 18, 17, 15, 15, 15, 9, 12, 14]
+        var alturas = [1.20, 2.10, 1.80, 1.98, 1.97, 1.96, 1.95, 1.94, 1.93, 1.92, 1.91, 1.90, 1.89, 1.88, 1.87, 1.40, 2.10, 1.80, 1.98, 1.97, 1.96, 1.95, 1.94, 1.93, 1.92, 1.91, 1.90, 1.89, 1.88, 1.87]
         var media = 0
         var menor_media = []
-        var idades13 = []
+        var idades13 = 0
 
-        for(altura in alturass){
+        for(altura in alturas){
             media += alturas[altura] 
         }
 
         media = (media/30)
 
-        total = 5
-        while(total != 0){
-            if(idade < 13){
-                idades.splice(0, 0)
-                alturas.splice(0, 0)
-                total -= 0
+        for(i in idades){
+            if(idades[i] < 13){
+                idades.splice(i, i)
+                alturas.splice(i, i)
             }
         }
 
 
-        for(idade in idades){
-            if(idade >= 13){
-                idade13.push(idades[idade])
+        for(i in alturas){
+            if(alturas[i] < media){
+                idades13 += 1
             }
         }
 
-        for(idade13 in idades13){
-            for(altura in alturas){
-
-            }
-        }
-
-        alert("os numeros são: "+(numeros))
-        alert("a soma deles é: "+(soma))
-        alert("e a multiplicação deles é: "+(mult))
+        alert((idades13)+" pessoas maior de treze anos são menores que a media")
 
 
     </script>

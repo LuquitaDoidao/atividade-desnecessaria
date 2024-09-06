@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        var carros = ["Fusca", "Gol", "Uno", "Vectra", "Peugeout"]
+        var km = []
+        var economico = 1000000
+        var final = ""
+        var soma = 0
+
+        for(i in carros){
+            var tem = (parseFloat(prompt("O carro "+(carros[i])+" gasta quantos litros por km?")))
+            km.push(tem)
+            soma += tem
+        }
+
+        numero = 1
+        for(i in carros){
+            div = 1000/km[i]
+            gasto = div * 2.25
+            final += ((numero)+"- "+(carros[i])+" - "+(km[i])+" L/km - "+(div)+"Litros - R$ "+(gasto)+"\n")
+            numero += 1
+        }
+
+        for(i in km){
+            if(km[i] < economico){
+                economico = carros[i]
+            }
+        }
+       
+
+        final += "\no carro mais economico é o "+(economico)
+        alert(final)
+
+
+    </script>
+</body>
+</html>

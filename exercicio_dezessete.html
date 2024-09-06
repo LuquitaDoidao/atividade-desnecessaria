@@ -8,30 +8,41 @@
 <body>
     <script>
 
-        var saltos = ["zero"]
+        var saltos = []
+        var media = 0
+        var info = ""
         var fim = 1
         var quantidade = 0
 
         while(fim != 0){
-            var nome = prompt("digite o nome do atleta (-1 para sair)")
-            if(nome == -1){
+            var nome = prompt("digite o nome do atleta (não escreva nada para sair)")
+            if(nome == ""){
                 break
             }else{
-                saltos.push(nome)
+                info += "Nome do atleta: "
+                info += nome
 
+                info += "\nNotas: "
                 var num = 0
                 while(num != 5){
                     var nota = parseFloat(prompt("digite a nota do salto"))
-                    saltos.push(nota)
+                    media += nota
+                    info += nota
+                    info += ", "
+
                     num += 1
                 }
-            }
-        }
 
+                media = (media/5)
+                info += "\nMedia: "
+                info += media
+            }
+            info += "\n\n"
+        }
 
         
 
-        alert("Atleta: "+(saltos[1])+" saltos: ")
+        alert(info)
 
 
     </script>
