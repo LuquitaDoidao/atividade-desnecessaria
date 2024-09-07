@@ -17,22 +17,10 @@
         var mult = 0
 
         while(fim != 0){
-            var tem = (parseInt(prompt("Em que estado está o mouse? \nDigite: \n0 para encerrar \n1 para caso ele necessitar da esfera \n2 para caso ele necessitar de limpeza \n3 para caso ele necessitar de troca do cabo ou conector \n4 para caso ele esteja quebrado ou inutilizado")))
-            if(tem == 1){
-                esfera += 1
-            }else if(tem == 2){
-                limpeza += 1
-            }else if(tem == 3){
-                cabo += 1
-            }else if(tem == 4){
-                quebra += 1
-            }else if(tem == 0){
-                fim -= 1
-            }else{
-                alert("numero invalido")
-            }
-            mult += 1
+            var nome = (prompt("Qual seu nome? "))
         }
+
+       
        
         alert("1- necessita da esfera "+(esfera)+" "+((esfera*100)/mult)+"%\n2- necessita de limpeza "+(limpeza)+" "+((limpeza*100)/mult)+"%\n3- necessita troca do cabo ou conector "+(cabo)+" "+((cabo*100)/mult)+"%\n4- quebrado ou inutilizado "+(quebra)+" "+((quebra*100)/mult)+"%")
 
