@@ -7,12 +7,10 @@
 </head>
 <body>
     <script>
-
 // ok
         var nota7 = 0
         var alunos = 1
         var numeros = []
-        
 
         while(alunos != 3){
 
@@ -21,17 +19,13 @@
                 var nota = (parseFloat(prompt("Digite a "+(all)+"° nota do aluno "+(alunos))))
                 numeros.push(nota)
                 all += 1
-                
             }
-            
-        
 
             var total = 0;
             var div = 0
 
             for(numero in numeros){
                 total += numeros[numero]
-                div = div + 1
             }
 
             if((total/4) >= 7){
@@ -40,12 +34,7 @@
             alunos += 1
         }
             
-        
-
         alert((nota7)+" alunos tiraram uma nota boa (acima de 7)")
-
-
-
 
     </script>
 </body>
